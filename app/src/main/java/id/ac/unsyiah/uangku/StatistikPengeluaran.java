@@ -7,28 +7,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomePengeluaran extends AppCompatActivity {
-    Button homepem, statistik, pengaturan, akun, add;
+public class StatistikPengeluaran extends AppCompatActivity {
+    Button home, stapem, pengaturan, akun, add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_pengeluaran);
-        homepem = (Button) findViewById(R.id.home_pem);
+        setContentView(R.layout.activity_statistik_pengeluaran);
+        home = (Button) findViewById(R.id.to_home);
 
-        homepem.setOnClickListener(new View.OnClickListener() {
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent bukaHomePem = new Intent(getApplicationContext(), HomePemasukan.class);
+                Intent bukaHomePem = new Intent(getApplicationContext(), HomePengeluaran.class);
                 startActivity(bukaHomePem);
             }
         });
 
-        statistik = (Button) findViewById(R.id.to_sta);
-        statistik.setOnClickListener(new View.OnClickListener() {
+        stapem = (Button) findViewById(R.id.sta_pem);
+        stapem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent buka_statistik = new Intent(getApplicationContext(), StatistikPengeluaran.class);
+                Intent buka_statistik = new Intent(getApplicationContext(), StatistikPemasukan.class);
                 startActivity(buka_statistik);
             }
         });
@@ -59,8 +59,6 @@ public class HomePengeluaran extends AppCompatActivity {
                 startActivity(buka_acc);
             }
         });
-
-
 
     }
 }

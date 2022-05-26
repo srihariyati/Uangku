@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_layout"
         android:layout_width="491dp"
         android:layout_height="822dp"
         app:layout_constraintEnd_toEndOf="parent"

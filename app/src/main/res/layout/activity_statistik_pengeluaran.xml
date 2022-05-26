@@ -4,59 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePengeluaran">
+    tools:context=".StatistikPengeluaran">
 
 
     <ImageView
-        android:id="@+id/homePeng"
-        android:layout_width="506dp"
-        android:layout_height="846dp"
-        android:src="@drawable/halaman_utamapengeluaran"
+        android:id="@+id/sta_peng_layout"
+        android:layout_width="491dp"
+        android:layout_height="822dp"
+        android:src="@drawable/statistik_peng"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="449dp"
-        android:layout_height="102dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/menu"
-        tools:ignore="MissingConstraints" />
-
     <Button
-        android:id="@+id/home_pem"
-        android:layout_width="94dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="236dp"
+        android:id="@+id/sta_pem"
+        android:layout_width="95dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="376dp"
         android:background="@color/none"
         android:backgroundTint="@color/none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintHorizontal_bias="0.708"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="385dp"
+        android:layout_height="83dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menustat"
+        tools:ignore="MissingConstraints" />
+
     <Button
-        android:id="@+id/to_sta"
+        android:id="@+id/to_home"
         android:layout_width="59dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/to_add"
-        android:layout_width="46dp"
+        android:layout_width="55dp"
         android:layout_height="49dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

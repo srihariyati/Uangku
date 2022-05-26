@@ -7,25 +7,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomePengeluaran extends AppCompatActivity {
-    Button homepem, statistik, pengaturan, akun, add;
+public class StatistikPemasukan extends AppCompatActivity {
+    Button home, stapeng, pengaturan, akun, add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_pengeluaran);
-        homepem = (Button) findViewById(R.id.home_pem);
+        setContentView(R.layout.activity_statistik_pemasukan);
 
-        homepem.setOnClickListener(new View.OnClickListener() {
+        home = (Button) findViewById(R.id.to_home);
+
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent bukaHomePem = new Intent(getApplicationContext(), HomePemasukan.class);
+                Intent bukaHomePem = new Intent(getApplicationContext(), HomePengeluaran.class);
                 startActivity(bukaHomePem);
             }
         });
 
-        statistik = (Button) findViewById(R.id.to_sta);
-        statistik.setOnClickListener(new View.OnClickListener() {
+        stapeng = (Button) findViewById(R.id.sta_peng);
+        stapeng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent buka_statistik = new Intent(getApplicationContext(), StatistikPengeluaran.class);
@@ -59,8 +60,5 @@ public class HomePengeluaran extends AppCompatActivity {
                 startActivity(buka_acc);
             }
         });
-
-
-
     }
 }
