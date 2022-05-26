@@ -28,6 +28,81 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/buka_pilihan"
+        android:layout_width="39dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="388dp"
+        android:background="@color/none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginLeft="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/putih"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/tanggal"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="468dp"
+        android:ems="10"
+        android:textColor="@color/textblue"
+        android:inputType="date"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/namaItem"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="288dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/textblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/harga"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/textblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tampil_pilihan"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="376dp"
+        android:textColor="@color/textblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageButton
         android:id="@+id/btn_batal"
         android:layout_width="147dp"
@@ -64,6 +139,92 @@
         app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/popupberhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pu_berhasil" />
+
+    <FrameLayout
+        android:id="@+id/popupbatal"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/pu_batal" />
+
+        <Button
+            android:id="@+id/v"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-55dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/none" />
+
+        <Button
+            android:id="@+id/x"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/none" />
+    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pilihan_pem"
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            android:layout_marginTop="1dp"
+
+            android:layout_marginBottom="1dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="23dp"
+                app:srcCompat="@drawable/kategoripemasukan" />
+
+            <Button
+                android:id="@+id/pil1"
+                android:layout_width="288dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:background="@color/none" />
+
+            <Button
+                android:id="@+id/pil2"
+                android:layout_width="288dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@color/none" />
+
+        </FrameLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

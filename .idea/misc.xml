@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_add_pemasukan.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/drawable/add.xml" value="0.185" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/drawable/backgroud_popup.xml" value="0.208" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_add_pemasukan.xml" value="0.22" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_add_pengeluaran.xml" value="0.25" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_akun.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_home_page_pengeluaran.xml" value="0.20416666666666666" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_pengaturan.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_statistik_pemasukan.xml" value="0.33" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/activity_statistik_pengeluaran.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/Uangku/app/src/main/res/layout/popup_simpan.xml" value="0.22" />
       </map>
     </option>
   </component>
