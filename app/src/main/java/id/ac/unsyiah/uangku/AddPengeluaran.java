@@ -3,16 +3,22 @@ package id.ac.unsyiah.uangku;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class AddPengeluaran extends AppCompatActivity {
-    Button back, addpem, yes, no, buka_pil;
+    Button back, addpem, yes, no, buka_pil,p1,p2,p3,p4;
     ImageButton simpan, batal, pu_simpan;
     FrameLayout pu_batal, pilihan;
+    DataHelper database;
+    String kategori;
+    EditText tanggal, namaItem, harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +103,45 @@ public class AddPengeluaran extends AppCompatActivity {
             public void onClick(View view) {
                 pilihan.setVisibility(View.VISIBLE);
 
+                p1 = (Button) findViewById(R.id.pil1);
+                p2 = (Button) findViewById(R.id.pil2);
+                p3 = (Button) findViewById(R.id.pil3);
+                p4 = (Button) findViewById(R.id.pil4);
+
+                p1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        kategori = "Makanan";
+                    }
+                });
+                p2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        kategori = "Minuman";
+                    }
+                });
+                p3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        kategori = "Internet";
+                    }
+                });
+                p4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        kategori = "Rumah";
+                    }
+                });
+
+                SQLiteDatabase db = database.getWritableDatabase();
+                db.execSQL("insert into pengeluaran(tanggal, kategori, item, harga) values(' "+
+                        tanggal.getText().toString() +"','"+
+                        kategori +"','"+
+                        namaItem.getText().toString()+ "','"+
+                        harga.getText().toString()+"')");
+                Toast.makeText(AddPengeluaran.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
+                HomePengeluaran.hpr.RefreshList();
+                finish();
 
             }
         });

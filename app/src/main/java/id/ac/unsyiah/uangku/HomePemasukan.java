@@ -1,14 +1,26 @@
 package id.ac.unsyiah.uangku;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class HomePemasukan extends AppCompatActivity {
     Button homepeng, statistik, pengaturan, akun, add;
+    String[] daftar;
+    ListView listView;
+    Menu menu;
+    protected Cursor cursor;
+    DataHelper database;
+    public static HomePemasukan hpl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +54,10 @@ public class HomePemasukan extends AppCompatActivity {
                 startActivity(buka_add);
             }
         });
+        hpl = this;
+        database = new DataHelper(this);
+        RefreshList();
+
 
         pengaturan = (Button) findViewById(R.id.to_set);
         pengaturan.setOnClickListener(new View.OnClickListener() {
@@ -61,4 +77,19 @@ public class HomePemasukan extends AppCompatActivity {
             }
         });
     }
+
+    public void RefreshList() {
+        SQLiteDatabase db = database.getReadableDatabase();
+        cursor = db.rawQuery("SELECT * FROM pemasukan", null );
+        daftar = new String [cursor.getCount()];
+        cursor.moveToFirst();
+        for (int i = 0; i < cursor.getCount(); i++){
+            cursor.moveToPosition(i);
+            daftar[i] = cursor.getString(2).toString();
+        }
+        listView = (ListView) findViewById(R.id.item);
+        listView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
+        listView.setSelected(true);
+    }
+
 }
