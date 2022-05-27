@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HomePengeluaran"
     tools:showIn="@layout/activity_home_pengeluaran">
+
     <ListView
         android:id="@+id/item"
         android:layout_width="match_parent"
@@ -17,16 +18,19 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/to_add"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="185dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_gravity="center|bottom"
         app:srcCompat="@drawable/add" />
 
+
     <ImageView
-        android:id="@+id/homePeng"
+        android:id="@+id/homePeng_layout"
         android:layout_width="365dp"
         android:layout_height="277dp"
         android:src="@drawable/halaman_utamapengeluaran"
@@ -35,10 +39,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageMenu"
         android:layout_width="449dp"
         android:layout_height="102dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="630dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,43 +51,48 @@
 
     <Button
         android:id="@+id/home_pem"
-        android:layout_width="94dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="236dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="200dp"
         android:background="@color/none"
-        android:backgroundTint="@color/none"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
 
     <Button
         android:id="@+id/to_sta"
         android:layout_width="59dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <Button-->
-<!--        android:id="@+id/to_add"-->
-<!--        android:layout_width="46dp"-->
-<!--        android:layout_height="49dp"-->
-<!--        android:layout_marginStart="180dp"-->
-<!--        android:layout_marginBottom="28dp"-->
-<!--        android:background="@color/none"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/to_add"-->
+    <!--        android:layout_width="52dp"-->
+    <!--        android:layout_height="52dp"-->
+    <!--        android:layout_marginStart="176dp"-->
+    <!--        android:layout_marginBottom="28dp"-->
+    <!--        android:background="@color/none"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/to_set"
         android:layout_width="44dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,12 +103,23 @@
         android:id="@+id/to_acc"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent" />
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="130dp"
+        android:textAlignment="center"
+        android:padding="10dp"
+
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:id="@+id/saldopl"></TextView>
 
 
 </RelativeLayout>

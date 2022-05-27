@@ -19,9 +19,9 @@ public class DataHelper extends SQLiteOpenHelper {
     private static final String KEY_HARGA = "harga";
 
     private static final String CREATE_TABLE_PEMASUKAN = "CREATE TABLE "
-            + TABLE_PEMASUKAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + "TEXT," + KEY_ITEM + "TEXT," + KEY_HARGA + "INT );";
+            + TABLE_PEMASUKAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + " TEXT," + KEY_ITEM + " TEXT," + KEY_HARGA + " INT );";
     private static final String CREATE_TABLE_PENGELUARAN = "CREATE TABLE "
-            + TABLE_PENGELUARAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + "TEXT," + KEY_ITEM + "TEXT," + KEY_HARGA + "INT );";
+            + TABLE_PENGELUARAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + " TEXT," + KEY_ITEM + " TEXT," + KEY_HARGA + " INT );";
 
 
     @Override

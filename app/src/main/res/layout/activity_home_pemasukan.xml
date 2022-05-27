@@ -18,12 +18,14 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/to_add"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="185dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+
         app:srcCompat="@drawable/add" />
 
 
@@ -38,8 +40,9 @@
 
     <ImageView
         android:id="@+id/imageMenu"
-        android:layout_width="449dp"
+        android:layout_width="500dp"
         android:layout_height="102dp"
+        android:layout_marginTop="630dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,8 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="228dp"
+        android:layout_marginLeft="80dp"
         android:background="@color/none"
-        android:backgroundTint="@color/none"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +68,8 @@
         android:id="@+id/to_sta"
         android:layout_width="59dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +90,9 @@
         android:id="@+id/to_set"
         android:layout_width="44dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,12 +103,23 @@
         android:id="@+id/to_acc"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="680dp"
         android:background="@color/none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent" />
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="130dp"
+        android:textAlignment="center"
+        android:padding="10dp"
+
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:id="@+id/saldopm"></TextView>
 
 
 </RelativeLayout>
