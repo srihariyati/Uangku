@@ -11,18 +11,23 @@ public class DataHelper extends SQLiteOpenHelper {
     public DataHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+    private static final String TABLE_PEMASUKAN = "pemasukan";
+    private static final String TABLE_PENGELUARAN = "pengeluaran";
+    private static final String KEY_TANGGAL = "tanggal";
+    private static final String KEY_KATEGORI = "kategori";
+    private static final String KEY_ITEM = "item";
+    private static final String KEY_HARGA = "harga";
+
+    private static final String CREATE_TABLE_PEMASUKAN = "CREATE TABLE "
+            + TABLE_PEMASUKAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + "TEXT," + KEY_ITEM + "TEXT," + KEY_HARGA + "INT );";
+    private static final String CREATE_TABLE_PENGELUARAN = "CREATE TABLE "
+            + TABLE_PENGELUARAN + "(" + KEY_TANGGAL + " TEXT,"+ KEY_KATEGORI + "TEXT," + KEY_ITEM + "TEXT," + KEY_HARGA + "INT );";
+
 
     @Override
     public void onCreate(SQLiteDatabase db){
-        //buat tabel pemasukan
-        String sql = "create table pemasukan(tanggal text null, kategori text null, item text null, harga int null);";
-        Log.d("Data", "onCreate : " + sql);
-        db.execSQL(sql);
-
-//        //buat tabel pengeluaran
-//        String sql2 = "create table pengeluaran(tanggal date null, kategori text null, item text null, harga int null);";
-//        Log.d("Data", "onCreate : " + sql2);
-//        db.execSQL(sql2);
+        db.execSQL(CREATE_TABLE_PEMASUKAN);
+        db.execSQL(CREATE_TABLE_PENGELUARAN);
     }
 
     @Override

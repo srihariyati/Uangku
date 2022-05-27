@@ -17,15 +17,20 @@ public class AddPengeluaran extends AppCompatActivity {
     Button back, addpem, yes, no, buka_pil,p1,p2,p3,p4;
     ImageButton simpan, batal, pu_simpan;
     FrameLayout pu_batal, pilihan;
-    //DataHelper database;
-    String kategori;
     TextView tampilkan;
-    //EditText tanggal, namaItem, harga;
+    DataHelper database;
+    String kategori;
+    EditText tanggal, namaItem, harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_pengeluaran);
+
+        database = new DataHelper(this);
+        tanggal = findViewById(R.id.tanggal);
+        namaItem = findViewById(R.id.namaItem);
+        harga = findViewById(R.id.harga);
 
         pu_simpan = (ImageButton) findViewById(R.id.popupberhasil);
         pu_simpan.setVisibility(View.INVISIBLE);
@@ -61,15 +66,17 @@ public class AddPengeluaran extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pu_simpan.setVisibility(View.VISIBLE);
+                //pu_simpan.setVisibility(View.VISIBLE);
 
-                pu_simpan.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent bukaHome = new Intent(getApplicationContext(), HomePengeluaran.class);
-                        startActivity(bukaHome);
-                    }
-                });
+                SQLiteDatabase db = database.getWritableDatabase();
+                db.execSQL("insert into pengeluaran(tanggal, kategori, item, harga) values(' "+
+                        tanggal.getText().toString() +"','"+
+                        kategori +"','"+
+                        namaItem.getText().toString()+ "','"+
+                        harga.getText().toString()+"')");
+                Toast.makeText(AddPengeluaran.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
+                HomePengeluaran.hpr.RefreshList();
+                finish();
             }
         });
 
@@ -144,16 +151,6 @@ public class AddPengeluaran extends AppCompatActivity {
                         pilihan.setVisibility(View.INVISIBLE);
                     }
                 });
-
-//                SQLiteDatabase db = database.getWritableDatabase();
-//                db.execSQL("insert into pengeluaran(tanggal, kategori, item, harga) values(' "+
-//                        tanggal.getText().toString() +"','"+
-//                        kategori +"','"+
-//                        namaItem.getText().toString()+ "','"+
-//                        harga.getText().toString()+"')");
-//                Toast.makeText(AddPengeluaran.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
-//                HomePengeluaran.hpr.RefreshList();
-//                finish();
 
             }
         });

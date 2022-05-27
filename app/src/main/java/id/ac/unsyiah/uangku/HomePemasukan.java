@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class HomePemasukan extends AppCompatActivity {
     Button homepeng, statistik, pengaturan, akun, add;
     String[] daftar;
@@ -45,12 +47,20 @@ public class HomePemasukan extends AppCompatActivity {
                 startActivity(buka_statistik);
             }
         });
+//        add = (Button) findViewById(R.id.to_add);
+//        add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent buka_add = new Intent(getApplicationContext(), AddPengeluaran.class);
+//                startActivity(buka_add);
+//            }
+//        });
+        FloatingActionButton add = findViewById(R.id.to_add);
 
-        add = (Button) findViewById(R.id.to_add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent buka_add = new Intent(getApplicationContext(), AddPengeluaran.class);
+                Intent buka_add = new Intent(HomePemasukan.this, AddPemasukan.class);
                 startActivity(buka_add);
             }
         });

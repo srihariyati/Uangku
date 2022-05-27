@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePengeluaran">
-
-
-    <ImageView
-        android:id="@+id/homePeng"
-        android:layout_width="506dp"
-        android:layout_height="846dp"
-        android:src="@drawable/halaman_utamapengeluaran"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    tools:context=".HomePengeluaran"
+    tools:showIn="@layout/activity_home_pengeluaran">
     <ListView
         android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="846dp"
-        app:layout_constraintBottom_toBottomOf="@+id/homePeng"></ListView>
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginRight="-15dp">
+    </ListView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/to_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/homePeng"
+        android:layout_width="365dp"
+        android:layout_height="277dp"
+        android:src="@drawable/halaman_utamapengeluaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,8 +44,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/menu"
         tools:ignore="MissingConstraints" />
-
-
 
     <Button
         android:id="@+id/home_pem"
@@ -64,15 +69,15 @@
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/to_add"
-        android:layout_width="46dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginBottom="28dp"
-        android:background="@color/none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/to_add"-->
+<!--        android:layout_width="46dp"-->
+<!--        android:layout_height="49dp"-->
+<!--        android:layout_marginStart="180dp"-->
+<!--        android:layout_marginBottom="28dp"-->
+<!--        android:background="@color/none"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/to_set"
@@ -97,4 +102,4 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

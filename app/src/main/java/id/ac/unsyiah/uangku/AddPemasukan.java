@@ -29,7 +29,6 @@ public class AddPemasukan extends AppCompatActivity {
 
         database = new DataHelper(this);
         tanggal = findViewById(R.id.tanggal);
-        //kategori = findViewById(R.id.kategori);
         namaItem = findViewById(R.id.namaItem);
         harga = findViewById(R.id.harga);
 

@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePemasukan">
+    tools:context=".HomePemasukan"
+    tools:showIn="@layout/activity_home_pemasukan">
 
+    <ListView
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginRight="-15dp">
+    </ListView>
 
-    <RelativeLayout
-        android:layout_width="361dp"
-        android:layout_height="356dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/to_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/add" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765">
-
-        <ListView
-            android:id="@+id/item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"></ListView>
-
-
-    </RelativeLayout>
 
     <ImageView
         android:id="@+id/homePem_layout"
-        android:layout_width="491dp"
-        android:layout_height="822dp"
+        android:layout_width="365dp"
+        android:layout_height="277dp"
         android:src="@drawable/halaman_utamapemasukan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,15 +71,15 @@
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/to_add"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginBottom="28dp"
-        android:background="@color/none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/to_add"-->
+<!--        android:layout_width="52dp"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:layout_marginStart="176dp"-->
+<!--        android:layout_marginBottom="28dp"-->
+<!--        android:background="@color/none"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/to_set"
@@ -106,4 +104,4 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
