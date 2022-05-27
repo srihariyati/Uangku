@@ -54,10 +54,6 @@ public class HomePemasukan extends AppCompatActivity {
                 startActivity(buka_add);
             }
         });
-        hpl = this;
-        database = new DataHelper(this);
-        RefreshList();
-
 
         pengaturan = (Button) findViewById(R.id.to_set);
         pengaturan.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +72,10 @@ public class HomePemasukan extends AppCompatActivity {
                 startActivity(buka_acc);
             }
         });
+
+        hpl = this;
+        database = new DataHelper(this);
+        RefreshList();
     }
 
     public void RefreshList() {
