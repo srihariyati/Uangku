@@ -16,9 +16,9 @@ public class AddPengeluaran extends AppCompatActivity {
     Button back, addpem, yes, no, buka_pil,p1,p2,p3,p4;
     ImageButton simpan, batal, pu_simpan;
     FrameLayout pu_batal, pilihan;
-    DataHelper database;
+    //DataHelper database;
     String kategori;
-    EditText tanggal, namaItem, harga;
+    //EditText tanggal, namaItem, harga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,15 +133,15 @@ public class AddPengeluaran extends AppCompatActivity {
                     }
                 });
 
-                SQLiteDatabase db = database.getWritableDatabase();
-                db.execSQL("insert into pengeluaran(tanggal, kategori, item, harga) values(' "+
-                        tanggal.getText().toString() +"','"+
-                        kategori +"','"+
-                        namaItem.getText().toString()+ "','"+
-                        harga.getText().toString()+"')");
-                Toast.makeText(AddPengeluaran.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
-                HomePengeluaran.hpr.RefreshList();
-                finish();
+//                SQLiteDatabase db = database.getWritableDatabase();
+//                db.execSQL("insert into pengeluaran(tanggal, kategori, item, harga) values(' "+
+//                        tanggal.getText().toString() +"','"+
+//                        kategori +"','"+
+//                        namaItem.getText().toString()+ "','"+
+//                        harga.getText().toString()+"')");
+//                Toast.makeText(AddPengeluaran.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
+//                HomePengeluaran.hpr.RefreshList();
+//                finish();
 
             }
         });

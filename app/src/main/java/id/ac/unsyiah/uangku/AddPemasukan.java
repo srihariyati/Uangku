@@ -63,18 +63,6 @@ public class AddPemasukan extends AppCompatActivity {
                         kategori = "Gaji Bulanan";
                     }
                 });
-
-                SQLiteDatabase db = database.getWritableDatabase();
-                db.execSQL("insert into pemasukan(tanggal, kategori, item, harga) values(' "+
-                        tanggal.getText().toString() +"','"+
-                        kategori +"','"+
-                        namaItem.getText().toString()+ "','"+
-                        harga.getText().toString()+"')");
-                Toast.makeText(AddPemasukan.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
-                HomePemasukan.hpl.RefreshList();
-                finish();
-
-
             }
         });
 
@@ -101,7 +89,17 @@ public class AddPemasukan extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pu_simpan.setVisibility(View.VISIBLE);
+
+                //pu_simpan.setVisibility(View.VISIBLE);
+                SQLiteDatabase db = database.getWritableDatabase();
+                db.execSQL("insert into pemasukan(tanggal, kategori, item, harga) values(' "+
+                        tanggal.getText().toString() +"','"+
+                        kategori +"','"+
+                        namaItem.getText().toString()+ "','"+
+                        harga.getText().toString()+"')");
+                Toast.makeText(AddPemasukan.this,"Data Tersimpan", Toast.LENGTH_SHORT).show();
+                HomePemasukan.hpl.RefreshList();
+                finish();
             }
         });
 

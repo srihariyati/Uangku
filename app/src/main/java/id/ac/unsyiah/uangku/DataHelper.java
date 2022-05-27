@@ -19,10 +19,10 @@ public class DataHelper extends SQLiteOpenHelper {
         Log.d("Data", "onCreate : " + sql);
         db.execSQL(sql);
 
-        //buat tabel pengeluaran
-        String sql2 = "create table pengeluaran(tanggal date null, kategori text null, item text null, harga int null);";
-        Log.d("Data", "onCreate : " + sql2);
-        db.execSQL(sql2);
+//        //buat tabel pengeluaran
+//        String sql2 = "create table pengeluaran(tanggal date null, kategori text null, item text null, harga int null);";
+//        Log.d("Data", "onCreate : " + sql2);
+//        db.execSQL(sql2);
     }
 
     @Override

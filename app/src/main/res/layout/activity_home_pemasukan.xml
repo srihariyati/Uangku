@@ -22,7 +22,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        app:layout_constraintBottom_toTopOf="@+id/homePem_layout"></ListView>
+        android:textAlignment="center"
+        ></ListView>
 
 
     <ImageView
