@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddPengeluaran extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class AddPengeluaran extends AppCompatActivity {
     FrameLayout pu_batal, pilihan;
     //DataHelper database;
     String kategori;
+    TextView tampilkan;
     //EditText tanggal, namaItem, harga;
 
     @Override
@@ -97,6 +99,7 @@ public class AddPengeluaran extends AppCompatActivity {
             }
         });
 
+        tampilkan = (TextView) findViewById(R.id.tampil_pilihan);
         buka_pil = (Button) findViewById(R.id.buka_pilihan);
         buka_pil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,24 +115,33 @@ public class AddPengeluaran extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         kategori = "Makanan";
+                        tampilkan.setText("Makanan");
+                        pilihan.setVisibility(View.INVISIBLE);
+
                     }
                 });
                 p2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         kategori = "Minuman";
+                        tampilkan.setText("Minuman");
+                        pilihan.setVisibility(View.INVISIBLE);
                     }
                 });
                 p3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         kategori = "Internet";
+                        tampilkan.setText("Internet");
+                        pilihan.setVisibility(View.INVISIBLE);
                     }
                 });
                 p4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         kategori = "Rumah";
+                        tampilkan.setText("Rumah");
+                        pilihan.setVisibility(View.INVISIBLE);
                     }
                 });
 

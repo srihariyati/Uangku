@@ -10,12 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddPemasukan extends AppCompatActivity {
     Button back, addpeng, yes, no, buka_pil, p1, p2;
     ImageButton simpan, batal, pu_simpan;
     FrameLayout pu_batal, pilihan;
+    TextView tampilkan;
     DataHelper database;
     String kategori;
     EditText tanggal, namaItem, harga;
@@ -41,6 +43,7 @@ public class AddPemasukan extends AppCompatActivity {
         pilihan = (FrameLayout) findViewById(R.id.pilihan_pem);
         pilihan.setVisibility(View.INVISIBLE);
 
+        tampilkan = (TextView) findViewById(R.id.tampil_pilihan) ;
         buka_pil = (Button) findViewById(R.id.buka_pilihan);
         buka_pil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,9 @@ public class AddPemasukan extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         kategori = "Uang Saku";
+                        tampilkan.setText("Uang Saku");
+                        pilihan.setVisibility(View.INVISIBLE);
+
                     }
                 });
 
@@ -61,6 +67,8 @@ public class AddPemasukan extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         kategori = "Gaji Bulanan";
+                        tampilkan.setText("Gaji Bulanan");
+                        pilihan.setVisibility(View.INVISIBLE);
                     }
                 });
             }
